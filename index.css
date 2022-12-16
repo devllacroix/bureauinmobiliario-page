@@ -4,6 +4,39 @@ body{
     margin: 0;
 }
 
+nav.navbar{
+    width: auto;
+    background-color: var(--purple-2);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+nav.navbar p{
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0 0 0 20px;
+}
+nav.navbar ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 5px 0;
+}
+nav.navbar ul li{
+    padding: 0 20px;
+}
+nav.navbar ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+nav.navbar ul li a:hover{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: var(--white);
+}
 
 .cabecera{
     width: 100%;
@@ -13,8 +46,8 @@ body{
     width: 100%;
     height: 40vh;
     background-repeat:no-repeat;
-    background-size: 100%;
-    background-position:center;
+    background-size: cover;
+    background-position:center center;
     background-color: aqua;
 }
 
@@ -274,6 +307,9 @@ footer a{
     text-decoration: none;
     color: var(--white);
 }
+footer a:hover{
+    text-decoration: underline;
+}
 
 @media (max-width:1400px) {
     
@@ -357,10 +393,19 @@ footer a{
 }
 
 @media (max-width:576px){
+    .cabecera .img-header{
+        background-image: url(/assets/casa1/foto_portada.jpg);
+        width: 100%;
+        height: 40vh;
+        background-repeat:unset;
+        background-size: 100vh;
+        background-position:center;
+        background-color: aqua;
+    }
+
     .tabla-info .tabla tr td:nth-child(n){
         padding: 15px 0px 15px 20px;
     }
-    
     .tabla-info .tabla tr td:nth-child(2n){
         padding-left: 20px;
         padding-right: 5px;
@@ -368,5 +413,21 @@ footer a{
     .info-pago .precio p{
         font-size: 2rem;
     }
-    
+
+    .distri-casa .planos .plano{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0;
+        text-align: start;
+        width: 100%;
+    }
+    .distri-casa .planos .plano img.foto-plano{
+        width: 100%;
+    }
+    .distri-casa .planos .plano p{
+        padding: 0 0px;
+        text-align: center;
+        width: 100%;
+    }
 }
