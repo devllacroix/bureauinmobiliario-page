@@ -1,0 +1,372 @@
+body{
+    color: var(--white);
+    background-color: var(--purple);
+    margin: 0;
+}
+
+
+.cabecera{
+    width: 100%;
+}
+.cabecera .img-header{
+    background-image: url(/assets/casa1/foto_portada.jpg);
+    width: 100%;
+    height: 40vh;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position:center;
+    background-color: aqua;
+}
+
+.encabezado{
+    margin-top: 50px;
+}
+
+.encabezado .info ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.encabezado .info ul li{
+    margin: 0 0 0 20px;
+}
+
+.encabezado .info ul li.etiqueta-venta{
+    margin: 0px;
+    background-color: var(--red);
+    padding: 4px 7px;
+    border-radius: 16px;
+}
+
+.banner-imgs{
+    display: flex;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.banner-imgs .img-banner-element#img-1,#img-3,#img-6,#img-8{
+    background-color: var(--purple-2);
+    width: 20.5%;
+    height: 20vh;
+}
+.banner-imgs .img-banner-element{
+    background-color: var(--red);
+    width: 29.4%;
+    height: 20vh;
+}
+
+
+
+.info-casa{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info-casa .descripcion{
+    margin-left: 48px;
+}
+
+
+
+.tabla-info{
+    margin-top: 50px;
+}
+
+.tabla-info .tabla{
+    margin-top: 30px;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+.tabla-info .tabla tr{
+    background-color: var(--purple-2);
+}
+
+.tabla-info .tabla tr:nth-child(2n){
+    background-color: var(--purple);
+}
+
+.tabla-info .tabla tr td:nth-child(n){
+    padding: 15px 0px 15px 40px;
+}
+
+.tabla-info .tabla tr td:nth-child(2n){
+    padding-left: 40px;
+}
+
+.distri-casa{
+    margin-top: 50px;
+}
+
+.distri-casa .planos{
+    display: flex;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.distri-casa .planos .plano{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.distri-casa .planos .plano img.foto-plano{
+    border-radius: 10px;
+    width: 16rem;
+}
+
+.distri-casa .planos .plano p{
+    padding: 0 40px;
+}
+
+.ubicacion{
+    margin-top: 50px;
+}
+
+.info-pago{
+    margin-top: 120px;
+}
+.info-pago h2{
+    font-weight: 300;
+}
+.info-pago .precio p{
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.info-pago .requisitos-contacto{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.info-pago .requisitos-contacto .requisitos h2{
+    margin-bottom: 40px;
+}
+.info-pago .requisitos-contacto .requisitos ul li{
+    margin: 15px 0;
+}
+.info-pago .requisitos-contacto .contacto{
+    padding: 0 0 0 80px;
+}
+.info-pago .requisitos-contacto .contacto h2{
+    margin-bottom: 40px;
+}
+.info-pago .requisitos-contacto .contacto .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+.info-pago .requisitos-contacto .contacto .item p{
+    margin: 0 0 0 20px;
+    padding: 0px;
+}
+.info-pago .requisitos-contacto .contacto .item img.icon{
+    width: 25px;
+    height: 25px;
+}
+.info-pago .requisitos-contacto .contacto button{
+    margin: 20px 0 0 0;
+    background-color: var(--green);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.info-pago .requisitos-contacto .contacto button:hover{
+    background-color: var(--green-2);
+    cursor: pointer;
+}
+
+.inmuebles{
+    margin-top: 80px;
+}
+
+.inmuebles .lista-inmuebles{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inmuebles .lista-inmuebles .tarjeta{
+    width: 30%;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--purple-2);
+    overflow: hidden;
+}
+
+.inmuebles .lista-inmuebles .tarjeta img{
+    width: 100%;
+}
+
+.inmuebles .lista-inmuebles .tarjeta .info{
+    padding: 20px;
+}
+
+.inmuebles .lista-inmuebles .tarjeta .info span.etiqueta{
+    background-color: var(--orange);
+    padding: 4px 15px;
+    border-radius: 8px;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.inmuebles .lista-inmuebles .tarjeta .info .tarjeta-info{
+    margin: 20px 0px 20px 0;
+}
+
+.inmuebles .lista-inmuebles .tarjeta .info .tarjeta-info h3{
+    margin: 0;
+}
+
+.inmuebles .lista-inmuebles .info a button{
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-size: 1rem;
+}
+.inmuebles .lista-inmuebles .info a button:hover{
+    background-color: var(--red-2);
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 100px;
+    background-color: var(--purple-2);
+    padding: 40px 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer div{
+    width: 20%;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li{
+    margin: 20px 0;
+    padding: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+@media (max-width:1400px) {
+    
+}
+
+@media (max-width:1200px) {
+    footer{
+        padding: 100px 100px;
+    }
+}
+
+@media (max-width:992px){
+
+    .info-casa{
+        display: flex;
+        flex-direction: wrap;
+        flex-wrap: wrap;
+    }
+    .info-casa .video{
+        width: 100%;
+    }
+    .info-casa .video iframe{
+        width: 100%;
+        height: 370px;
+    }
+    .info-casa .descripcion{
+        margin: 0;
+    }
+    
+    .inmuebles .lista-inmuebles{
+        display: flex;
+        flex-direction: wrap;
+        flex-wrap: wrap;
+    }
+    .inmuebles .lista-inmuebles .tarjeta{
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: wrap;
+        flex-wrap: wrap;
+        padding: 80px 100px;
+    }
+    footer div{
+        width: 30%;
+        margin-top: 40px;
+    }
+    footer div.logo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    footer div.logo h2{
+        margin-left: 40px;
+    }
+}
+
+@media (max-width:768px){
+    .info-pago .requisitos-contacto{
+        display: flex;
+        flex-direction: wrap;
+        flex-wrap: wrap;
+    }
+    .info-pago .requisitos-contacto .requisitos ul{
+        padding: 0 0 0 10px;
+    }
+    .info-pago .requisitos-contacto .contacto{
+        padding: 0;
+    }
+    footer{
+        padding: 40px;
+    }
+    footer div{
+        width: 100%;
+    }
+}
+
+@media (max-width:576px){
+    .tabla-info .tabla tr td:nth-child(n){
+        padding: 15px 0px 15px 20px;
+    }
+    
+    .tabla-info .tabla tr td:nth-child(2n){
+        padding-left: 20px;
+        padding-right: 5px;
+    }
+    .info-pago .precio p{
+        font-size: 2rem;
+    }
+    
+}
