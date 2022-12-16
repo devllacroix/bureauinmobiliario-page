@@ -1,0 +1,49 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --white: #ffffff;
+    --black: #010101;
+    --red: #d31336;
+    --red-2: #9e0f29; 
+    --green: #1e8228;
+    --green-2: #125519;
+    --orange: #ea3f22;
+    --purple: #0a0a14;
+    --purple-2:#111120;
+}
+
+.container{
+    margin: 0px 300px;
+}
+
+@media (max-width:1400px) {
+    .container{
+        margin: 0px 200px
+    }
+}
+
+@media (max-width:1200px) {
+    .container{
+        margin: 0px 150px
+    }
+}
+
+@media (max-width:992px){
+    .container{
+        margin: 0px 100px
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        margin: 0px 50px
+    }
+}
+
+@media (max-width:576px){
+    .container{
+        margin: 0px 20px
+    }
+}
