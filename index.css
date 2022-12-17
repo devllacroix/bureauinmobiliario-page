@@ -42,7 +42,7 @@ nav.navbar ul li a:hover{
     width: 100%;
 }
 .cabecera .img-header{
-    background-image: url(/assets/casa1/foto_portada.jpg);
+    background-image: url(/assets/casa1/foto-1.jpg);
     width: 100%;
     height: 40vh;
     background-repeat:no-repeat;
@@ -75,27 +75,119 @@ nav.navbar ul li a:hover{
     border-radius: 16px;
 }
 
-.banner-imgs{
+.imagenes{
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:baseline;
+    flex-flow: nowrap;
     margin-top: 50px;
 }
-.banner-imgs .img-banner-element#img-1,#img-3,#img-6,#img-8{
+.imagenes .imagen{
+    width: 30%;
+    height: auto;
+    margin: 20px 0;
+}
+.imagenes .imagen .btn-modal{
+    display: none;
+}
+.imagenes .imagen .miniatura-foto{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.imagenes .imagen .miniatura-foto img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.imagenes .imagen .modal-area{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    visibility:hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.imagenes .imagen .modal-area .modal-ventana{
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.imagenes .imagen .modal-area .modal-ventana .encabezado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 15px;
+
     background-color: var(--purple-2);
-    width: 20.5%;
-    height: 20vh;
+    margin: 0;
 }
-.banner-imgs .img-banner-element{
+.imagenes .imagen .modal-area .modal-ventana .encabezado .cerrar{
+    border: none;
+    background-color: var(--purple);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.imagenes .imagen .modal-area .modal-ventana .encabezado .cerrar:hover{
     background-color: var(--red);
-    width: 29.4%;
-    height: 20vh;
 }
-
-
+.imagenes .imagen .modal-area .modal-ventana .modal-body img{
+    height: 500px;
+}
+#btn-modal{
+    display: none;
+}
+#btn-modal:checked ~ .modal-area{
+    opacity: 1;
+    visibility: visible;
+}
+#btn-modal-2{
+    display: none;
+}
+#btn-modal-2:checked ~ .modal-area{
+    opacity: 1;
+    visibility: visible;
+}
+#btn-modal-3{
+    display: none;
+}
+#btn-modal-3:checked ~ .modal-area{
+    opacity: 1;
+    visibility: visible;
+}
+#btn-modal-4{
+    display: none;
+}
+#btn-modal-4:checked ~ .modal-area{
+    opacity: 1;
+    visibility: visible;
+}
+#btn-modal-5{
+    display: none;
+}
+#btn-modal-5:checked ~ .modal-area{
+    opacity: 1;
+    visibility: visible;
+}
+#btn-modal-6:checked ~ .modal-area{
+    opacity: 1;
+    visibility: visible;
+}
 
 .info-casa{
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
 }
