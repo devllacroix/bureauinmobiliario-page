@@ -18,6 +18,18 @@ html{
     margin: 0px 300px;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+img{
+    max-width: 100%;
+}
+
 @media (max-width:1400px) {
     .container{
         margin: 0px 200px

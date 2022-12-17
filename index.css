@@ -14,27 +14,42 @@ nav.navbar{
     align-items: center;
     padding: 0 40px;
 }
+.toggle-menu{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 40px;
+    display: none;
+}
+/* 
 nav.navbar p{
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0 0 0 20px;
-}
-nav.navbar ul{
+} */
+.main-menu{
     display: flex;
     flex-direction: row;
     list-style: none;
-    padding: 5px 0;
+    margin: 0;
+    transform: translateY(0);
 }
 nav.navbar ul li{
-    padding: 0 20px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+nav.navbar ul li:hover{
+    background-color: var(--red);
+}
+nav.navbar ul li.nombre-empresa{
+    font-weight: 500;
+}
+nav.navbar ul li.nombre-empresa:hover{
+    background-color: var(--purple-2);
 }
 nav.navbar ul li a{
     text-decoration: none;
-    color: var(--white);
-}
-nav.navbar ul li a:hover{
-    text-decoration: underline;
-    text-underline-offset: 10px;
     color: var(--white);
 }
 
@@ -48,7 +63,6 @@ nav.navbar ul li a:hover{
     background-repeat:no-repeat;
     background-size: cover;
     background-position:center center;
-    background-color: aqua;
 }
 
 .encabezado{
@@ -75,115 +89,43 @@ nav.navbar ul li a:hover{
     border-radius: 16px;
 }
 
-.imagenes{
+.fotos .contenedor-fotos{
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items:baseline;
-    flex-flow: nowrap;
-    margin-top: 50px;
-}
-.imagenes .imagen{
-    width: 30%;
-    height: auto;
-    margin: 20px 0;
-}
-.imagenes .imagen .btn-modal{
-    display: none;
-}
-.imagenes .imagen .miniatura-foto{
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-.imagenes .imagen .miniatura-foto img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-.imagenes .imagen .modal-area{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    visibility:hidden;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    margin: auto;
-}
-.imagenes .imagen .modal-area .modal-ventana{
-    position: relative;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.imagenes .imagen .modal-area .modal-ventana .encabezado{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px 10px 15px;
 
-    background-color: var(--purple-2);
-    margin: 0;
+    margin-top: 40px;
 }
-.imagenes .imagen .modal-area .modal-ventana .encabezado .cerrar{
-    border: none;
-    background-color: var(--purple);
-    padding: 5px 10px;
+
+.fotos .contenedor-fotos .foto{
+    width: 32%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+
     border-radius: 5px;
-    cursor: pointer;
+    margin-top: 20px;
 }
-.imagenes .imagen .modal-area .modal-ventana .encabezado .cerrar:hover{
-    background-color: var(--red);
+
+.fotos .contenedor-fotos #foto-1{
+    background-image: url(/assets/casa1/foto-1.jpg);
 }
-.imagenes .imagen .modal-area .modal-ventana .modal-body img{
-    height: 500px;
+.fotos .contenedor-fotos #foto-2{
+    background-image: url(/assets/casa1/foto-2.jpeg);
 }
-#btn-modal{
-    display: none;
+.fotos .contenedor-fotos #foto-3{
+    background-image: url(/assets/casa1/foto-3.jpeg);
 }
-#btn-modal:checked ~ .modal-area{
-    opacity: 1;
-    visibility: visible;
+.fotos .contenedor-fotos #foto-4{
+    background-image: url(/assets/casa1/foto-4.jpeg);
 }
-#btn-modal-2{
-    display: none;
+.fotos .contenedor-fotos #foto-5{
+    background-image: url(/assets/casa1/foto-5.jpeg);
 }
-#btn-modal-2:checked ~ .modal-area{
-    opacity: 1;
-    visibility: visible;
-}
-#btn-modal-3{
-    display: none;
-}
-#btn-modal-3:checked ~ .modal-area{
-    opacity: 1;
-    visibility: visible;
-}
-#btn-modal-4{
-    display: none;
-}
-#btn-modal-4:checked ~ .modal-area{
-    opacity: 1;
-    visibility: visible;
-}
-#btn-modal-5{
-    display: none;
-}
-#btn-modal-5:checked ~ .modal-area{
-    opacity: 1;
-    visibility: visible;
-}
-#btn-modal-6:checked ~ .modal-area{
-    opacity: 1;
-    visibility: visible;
+.fotos .contenedor-fotos #foto-6{
+    background-image: url(/assets/casa1/foto-6.jpeg);
 }
 
 .info-casa{
@@ -411,9 +353,29 @@ footer a:hover{
     footer{
         padding: 100px 100px;
     }
+    
+    .fotos .contenedor-fotos .foto{
+        width: 49%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+    
+        border-radius: 5px;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width:992px){
+
+    .fotos .contenedor-fotos .foto{
+        width: 100%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+    
+        border-radius: 5px;
+        margin-top: 20px;
+    }
 
     .info-casa{
         display: flex;
@@ -465,6 +427,44 @@ footer a:hover{
 }
 
 @media (max-width:768px){
+    .toggle-menu{
+        display: block;
+        z-index: 1;
+    }
+    nav.navbar{
+        padding: 0;
+        height: 0px;
+    }
+    .main-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s;
+        z-index: 0;
+        background-color: var(--purple);
+    }
+    .main-menu--show{
+        transform: translateY(50%);
+    }
+    nav.navbar ul li{
+        width: 100%;
+        padding: 20px 0px;
+        text-align: center;
+    }
+    nav.navbar ul li:hover{
+        background-color: var(--red);
+    }
+    nav.navbar ul li a:hover{
+        text-decoration: none;
+    }
+    nav.navbar ul li.nombre-empresa:hover{
+        background-color: var(--purple);
+    }
     .info-pago .requisitos-contacto{
         display: flex;
         flex-direction: wrap;
@@ -485,14 +485,17 @@ footer a:hover{
 }
 
 @media (max-width:576px){
-    .cabecera .img-header{
-        background-image: url(/assets/casa1/foto_portada.jpg);
-        width: 100%;
-        height: 40vh;
-        background-repeat:unset;
-        background-size: 100vh;
-        background-position:center;
-        background-color: aqua;
+
+    .encabezado .info ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .encabezado .info ul li{
+        margin: 10px 0px;
+    }
+    .encabezado .info ul li.etiqueta-venta{
+        margin-bottom: 10px;
     }
 
     .tabla-info .tabla tr td:nth-child(n){
